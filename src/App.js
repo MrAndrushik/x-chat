@@ -7,7 +7,7 @@ import { auth } from "./firebase-config";
 import Loader from "./components/Loader";
 
 function App() {
-    const [user, loading, error] = useAuthState(auth);
+    const [, loading] = useAuthState(auth);
 
     if (loading) {
         return <Loader dark={true} />;

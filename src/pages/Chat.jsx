@@ -28,7 +28,7 @@ const Chat = () => {
     const sendMessage = async () => {
         // console.log(1);
         try {
-            const docRef = await addDoc(collection(db, "messages"), {
+            await addDoc(collection(db, "messages"), {
                 uid: auth.currentUser.uid,
                 email: auth.currentUser.email,
                 message: value,

@@ -1,0 +1,58 @@
+@import "consts";
+
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.header__container {
+    padding-top: 30px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    max-width: 80px;
+}
+
+.header__logo:hover {
+    animation: logoAnimation 1s infinite linear;
+}
+
+.login-btn {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: $red;
+    transition: all 0.2s ease-in;
+    font-weight: 500;
+}
+
+.login-btn:hover {
+    background: $green;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: perspective(130px) rotateY(0deg);
+    }
+    20% {
+        transform: perspective(130px) rotateY(-15deg);
+    }
+    40% {
+        transform: perspective(130px) rotateY(15deg);
+    }
+    60% {
+        transform: perspective(130px) rotateY(-15deg);
+    }
+    80% {
+        transform: perspective(130px) rotateY(15deg);
+    }
+    100% {
+        transform: perspective(130px) rotateY(0deg);
+    }
+}

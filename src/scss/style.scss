@@ -1,0 +1,149 @@
+@import "consts";
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
+}
+
+body {
+    font-weight: 400;
+    color: $light-color;
+    background: $dark-color;
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #282a30;
+}
+
+.stn-title {
+    text-align: left;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    color: #16212d;
+}
+
+.unselectable-word {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently                                   not supported by any browser */
+}
+
+.be-relative {
+    position: relative;
+}
+
+.container {
+    max-width: $container;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+::-webkit-scrollbar {
+    background: #282a30;
+    border-radius: 10px;
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $red;
+    border-radius: 15px;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        $container: 1220px !global;
+        max-width: $container;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        $container: 960px !global;
+        max-width: $container;
+    }
+}
+
+@media (max-width: 998px) {
+    .container {
+        $container: 740px !global;
+        max-width: $container;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        $container: 540px !global;
+        max-width: $container;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+// TEMPLATE
+// @media (max-width: 1400px) {
+// }
+
+// @media (max-width: 1200px) {
+// }
+
+// @media (max-width: 998px) {
+// }
+
+// @media (max-width: 768px) {
+// }
+
+// @media (max-width: 576px) {
+// }

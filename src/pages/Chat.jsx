@@ -11,19 +11,10 @@ const Chat = () => {
     const [value, setValue] = React.useState("");
     const [messages, loading] = useCollectionData(collection(db, "messages"));
 
-    // React.useEffect(() => {
-    //     getMessages();
-    // }, []);
-
-    // const getMessages = async () => {
-    //     const querySnapshot = await getDocs(collection(db, "messages"));
-    //     const arr = [];
-    //     querySnapshot.forEach((doc) => {
-    //         arr.push(doc.data());
-    //     });
-    //     console.log(arr);
-    //     setMessages(arr);
-    // };
+    function autoResize(e) {
+        e.target.style.height = "auto";
+        e.target.style.height = e.target.scrollHeight + "px";
+    }
 
     const sendMessage = async () => {
         // console.log(1);
@@ -73,6 +64,7 @@ const Chat = () => {
                                     >
                                         {item.message}
                                     </p>
+                                    <p className="user__email">{item.email}</p>
                                 </div>
                             ))}
                 </div>
@@ -84,6 +76,7 @@ const Chat = () => {
                         type="text"
                         className="chat__input"
                         rows={1}
+                        onInput={(e) => autoResize(e)}
                     />
                     <button onClick={sendMessage} className="chat__send">
                         Отправить

@@ -30,6 +30,8 @@
     margin-bottom: 10px;
     resize: none;
     line-height: 20px;
+    display: block;
+    overflow: hidden;
 }
 
 .chat__input::-webkit-scrollbar {
@@ -84,4 +86,10 @@
     font-weight: 300;
     display: flex;
     word-break: break-word;
+}
+
+.user__email {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #75777e;
 }

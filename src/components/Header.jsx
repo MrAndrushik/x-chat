@@ -46,10 +46,13 @@ const Header = () => {
                                 </button>
                             ) : (
                                 <button
-                                    className="login-btn"
+                                    className="login-btn--user"
                                     onClick={() => logout(true)}
                                 >
-                                    {currentUser.email}
+                                    <img
+                                        src="images/profile.svg"
+                                        alt="profile"
+                                    />
                                 </button>
                             )}
                         </li>
